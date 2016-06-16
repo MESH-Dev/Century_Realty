@@ -1627,6 +1627,7 @@ ul#nav .stretch {
   text-align: right;
   position: absolute;
   right: 10px;
+  z-index: 500;
 }
 
 /* line 152, ../sass/_layout.scss */
