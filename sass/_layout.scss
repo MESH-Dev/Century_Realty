@@ -1,0 +1,630 @@
+ 
+/* Table of Content
+==================================================
+ 
+
+/* Header Styles
+================================================== */
+#header{
+	background-color: $navy;
+	height: 140px;
+	width: 100%;
+	@include breakpoint(landscape) { 
+   		height: auto;
+    }
+    @include breakpoint(portrait) { 
+    	height: auto;
+    }
+}
+
+
+.logo{
+	padding-top: 30px;
+
+	&:hover{@include opacity(0.8); }
+
+	@include breakpoint(smallscreen) {
+ 		padding-top: 36px;
+		img {max-width:175px; }
+	}
+	
+	@include breakpoint(landscape) {
+		padding-bottom:4px;
+ 		border-bottom: 1px solid $bluegray;
+		img { padding-left:100px; }
+		&:after{content:""; 
+			width:100%; 
+			margin-top:4px; 
+			display:block;
+			border-bottom: 1px solid $bluegray; 
+		}
+	}
+	@include breakpoint(portrait) {
+		padding-bottom:4px;
+ 		border-bottom: 1px solid $bluegray;
+		img { padding-left:42px;  }
+		&:after{content:""; 
+			width:100%; 
+			margin-top:4px; 
+			display:block;
+			border-bottom: 1px solid $bluegray; 
+		}
+	}
+}
+
+.navigation{  
+	margin-top: 82px; 
+	padding-bottom: 3px; 
+	border-bottom: 1px solid $orange;
+
+	@include breakpoint(landscape) { 
+   		margin-top: 10px; 
+		padding-bottom: 0px; 
+		margin-bottom:20px; 
+		border-bottom: transparent;
+    }
+
+	@include breakpoint(portrait) { 
+		margin-top: 10px; 
+		padding-bottom: 0px; 
+		margin-bottom:20px; 
+		border-bottom: transparent;
+	}
+}
+.navigation:after{
+	content:""; 
+	width:100%; 
+	margin-top:3px; 
+	display:block;
+	border-bottom: 1px solid $orange; 
+	@include breakpoint(landscape) { 
+   		 border-bottom: none; 
+    } 
+    @include breakpoint(portrait) { 
+   		 border-bottom: none; 
+    } 
+}
+
+ul#nav{
+	height:20px;
+	margin-bottom: 8px;
+	width: 100%; 	
+	text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+
+    @include breakpoint(smallscreen) {
+
+	}
+
+	@include breakpoint(landscape) {
+		height: auto; text-align: left;
+		margin-bottom: 0px; 
+	}
+	@include breakpoint(portrait) {
+		height: auto; text-align: left;
+		margin-bottom: 0px; 
+	}
+
+
+	li{
+		text-transform: uppercase; 
+		font-weight:bold; 
+		vertical-align: top;
+    	display: inline-block;    
+    	*display: inline;   
+    	zoom: 1;
+    	margin-right:1em;
+		a{text-decoration: none; color: $orange;}
+		a:hover{text-decoration: none; color: $gray; } 
+		&:last-child{padding-right:0px;}
+
+		@include breakpoint(smallscreen) {
+    	 	font-size: 11px;	
+		}
+
+		@include breakpoint(landscape) {
+			display: block; padding-top:5px;       
+		}
+		@include breakpoint(portrait) {
+			display: block; padding-top:5px;       
+		}
+
+
+	}
+	.stretch{width: 100%; display: inline-block; font-size: 0; line-height: 0;}
+}
+
+
+@include breakpoint(landscape) 
+{
+	.menu-main-navigation-container{ }
+ 	.navigation {  }	 
+}
+
+.top-bar{
+	text-align:right;
+	position:absolute;
+	right:10px;
+	
+}
+		
+.top-links{
+	//background:#98a6b9; 
+	margin-bottom:7px; 
+	padding:.7em .7em .5em 0;
+	
+
+	a:hover, 
+	a:active, 
+	a:focus{
+		opacity:.8;
+	}
+}
+
+@media only screen and (max-width:768px){
+	.top-bar{
+		position:relative;
+	    background-color: #0c2649;
+	    right:0px;
+
+	    .top-links{
+	    margin-bottom:0;
+		}
+	}
+
+}
+		
+
+/* Hompage Styles
+================================================== */
+ 
+.slides{ margin-bottom:20px;}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+
+  li {
+	  -webkit-backface-visibility: hidden;
+	  position: absolute;
+	  display: none;
+	  width: 100%;
+	  left: 0;
+	  top: 0;
+	  padding-bottom:0px;
+  	  margin-bottom: 0px;
+  }
+
+  li:first-child {
+	  position: relative;
+	  display: block;
+	  float: left;
+	   }
+
+	   img {
+	  display: block;
+	  height: auto;
+	  float: left;
+	  width: 100%;
+	  border: 0;
+   }
+}
+
+.border_box{ border: 1px solid $orange;   }
+.border_inner{margin: 4px;	border: 1px solid $orange;}
+
+
+.home_quote {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-size: 20px;
+	text-shadow: none;
+	color: $navy;
+	background: #fff;
+	background: rgba(255,255,255, .70);
+	left: 7px;
+	right: 0;
+	bottom: 10%;
+	text-indent: -1ex; 
+	@include margin-offset(7); 
+	@include columns(5);
+
+	 p{padding: 20px 12px 20px 15px; margin:5px; background: rgba(255,255,255, .70); font-size:22px; line-height:28px; font-family: "minion-pro",sans-serif; font-weight:bold; font-style: italic;}	
+
+	@include breakpoint(smallscreen) { 
+		@include margin-offset(7, $sk-tablet-col);
+		@include columns(5, $sk-tablet-col);
+	}
+   
+    @include breakpoint(landscape) { 
+    	@include margin-offset(0); 
+		@include columns(0);  
+    	left: 0; 	 
+		bottom: 5%; width: 420px;
+    	 p{padding: 10px 10px 10px 10px; margin:5px; background: rgba(255,255,255, .70); font-size:16px; line-height:20px; font-family: "minion-pro",sans-serif; font-weight:bold; font-style: italic;}	
+    }
+
+	@include breakpoint(portrait) {  
+    	width: 300px;
+    	@include margin-offset(0); 
+		@include columns(0);  
+    	left: 0; 	 
+		bottom: 2%; 
+    	 p{padding: 10px 10px 10px 10px; margin:5px; background: rgba(255,255,255, .70); font-size:16px; line-height:20px; font-family: "minion-pro",sans-serif; font-weight:bold; font-style: italic;}	
+	}
+
+}
+
+.callout{	@include breakpoint(landscape) { 
+     	margin-top: 20px;
+    }
+
+	@include breakpoint(portrait) { 
+	 	margin-top: 20px;
+	}}
+
+
+
+.home_callout{
+	 
+	margin:4px;
+	border: 1px solid $orange;
+	text-align: center; 
+	padding: 16px 0px 16px 0px; 
+
+	@include breakpoint(smallscreen) { 
+		 height:82px;
+	}
+
+	h2{
+		font-size:28px; 
+		line-height:36px;
+		text-transform: uppercase;
+		font-weight: normal;
+		a{
+			color: $darkgray;
+			text-decoration: none;
+		}
+		a:hover{
+			color: $orange;
+			text-decoration: none;
+		}
+    }
+} 
+
+.home_line{  
+	margin-top: 30px; 
+	padding-bottom: 4px; 
+	border-bottom: 1px solid $bluegray;
+
+	&:after{
+		content:""; 
+		width:100%; 
+		margin-top:4px; 
+		display:block;
+		border-bottom: 1px solid $bluegray  
+	}
+}
+
+.home_column{
+	padding: 15px 0px 10px 0px;
+
+	h2{
+		text-transform: uppercase; 
+		font-weight: normal; 
+		border-bottom: 1px solid $bluegray;
+		padding-bottom: 4px;
+		&:after{
+			content:""; 
+			width:100%; 
+			 margin-top: 12px; 
+			display:block;
+			border-bottom: 1px solid $bluegray  
+		}
+	}
+
+	p{
+		padding-right:30px;
+		font-size:17px;
+		line-height:24px;
+	}
+}
+
+a.more{float:right; font-weight:bold; font-style: italic;}
+
+/* SUBHEADER Styles
+================================================== */
+ .page_title {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	font-size: 20px;
+	text-shadow: none;
+	color: $navy;
+	background: #fff;
+	background: rgba(255,255,255, .70);
+	left: 7px;
+	right: 0;
+	bottom: 17%;
+	@include margin-offset(7); 
+	@include columns(5);
+
+	 h1{padding: 20px 12px 20px 15px; margin:5px; background: rgba(255,255,255, .70);  font-family: "minion-pro",sans-serif; font-weight:bold;  text-transform: uppercase; text-align: center;}	
+
+	@include breakpoint(smallscreen) { 
+		@include margin-offset(7, $sk-tablet-col);
+		@include columns(5, $sk-tablet-col);
+	}
+   
+    @include breakpoint(landscape) { 
+    	width: 410px;
+    	@include margin-offset(0); 
+		@include columns(0);  
+    	right: 0; 	 
+		bottom: 4%; 
+    	h1{padding: 10px 5px 5px 10px; margin:5px; background: rgba(255,255,255, .70); font-size:20px; line-height:20px; font-family: "minion-pro",sans-serif; font-weight:bold; font-style: italic;}	
+    }
+
+	@include breakpoint(portrait) { 
+		width: 300px;
+    	@include margin-offset(0); 
+		@include columns(0);  
+    	left: 0; 	 
+		bottom: 2%; 
+    	h1{padding: 8px 5px 8px 5px; margin:5px; background: rgba(255,255,255, .70); font-size:18px; line-height:20px; font-family: "minion-pro",sans-serif; font-weight:bold; font-style: italic;}	
+	}
+
+}
+
+/* PAGE Styles
+================================================== */
+.page_content{
+	margin-top: 20px;
+	 
+	a{
+		&:hover, &:focus, &:active{color:$orange}
+		}
+
+	h2{
+		text-transform: uppercase; 
+		color: $navy;
+		font-weight: normal; 
+		border-bottom: 1px solid $orange;
+		padding-bottom: 4px;
+		&:after{
+			content:""; 
+			width:100%; 
+			margin-top: 0px; 
+			display:block;
+			border-bottom: 1px solid $orange ;
+			 
+		}
+
+	}
+}
+.page_nav { 
+	padding: 15px 15px 40px 15px;
+	li{padding-bottom: 6px;}
+	li a{color: $darkgray; text-transform: uppercase; font-weight: bold;}
+	li a:hover{color: $orange;}
+	@include breakpoint(landscape) {
+		padding: 15px 15px 15px 15px;       
+	}
+	@include breakpoint(portrait) {
+		padding: 15px 15px 15px 15px;       
+	}
+}
+
+.page_side{margin-top: 20px;}
+
+
+.testimonials{
+	
+	p{
+		color: $navy;
+		font-family: "minion-pro",sans-serif; 
+		font-weight:bold;
+		font-style: italic;
+		padding: 25px 15px 25px 15px;
+	}
+
+	@include breakpoint(landscape) { 
+    	 	
+    }
+
+	@include breakpoint(portrait) { 
+		 display: none;	
+	}
+}
+
+.landing_blocks{
+	@include column-offset-no-gutter(1);
+	.columns {margin-bottom:20px;}
+
+	@include breakpoint(smallscreen) { 
+		 padding-left: 20px;
+	}
+   
+    @include breakpoint(landscape) { 
+     	padding-left: 0px;
+    }
+
+	@include breakpoint(portrait) { 
+	 	padding-left: 0px;
+	}
+}
+
+.content{
+
+	ul, ol { margin-bottom: 10px; }
+	ul { list-style: outside; }
+	ol { list-style: decimal; }
+	ol, ul { margin-left: 30px; }
+ 
+	ul ul, ul ol,
+	ol ol, ol ul { margin: 0px 0 0px 0px; font-size: 100%;  }
+	ul ul li, ul ol li,
+	ol ol li, ol ul li { margin-bottom: 0px; }
+	li { line-height: 18px; margin-bottom: 0px; }
+
+	@include breakpoint(landscape) { 
+     	padding-top: 20px;
+    }
+
+	@include breakpoint(portrait) { 
+	 	padding-top: 20px;
+	}
+}
+
+
+
+/* FOOTER Styles
+================================================== */
+#footer{
+	width: 100%; 
+	background-color: $gray;
+	margin-top: 80px;
+}
+.footer{
+	padding-top:20px;
+	
+	.menu {
+
+		ul{
+			-moz-column-count: 3;
+		    -moz-column-gap: 20px;
+		    -webkit-column-count: 3;
+		    -webkit-column-gap: 20px;
+		    column-count: 3;
+		    column-gap: 20px;
+		    width: 450px;
+
+		    @include breakpoint(portrait) {
+		 		display:none;
+			}
+			@include breakpoint(landscape) {
+		 		display:none;
+			}
+		}
+		li{
+			list-style-type: none; 
+			font-weight:bold;
+			 margin-bottom:18px;  
+
+			ul li {font-weight: normal;margin-bottom:4px; }
+	    }
+		li a{
+			color: #fff;
+			&:hover{color: $navy}
+		}
+	}
+
+	ul.footer-locations li {
+    display: inline-block;
+    float: left;
+    padding-right: 10px;
+    width: auto;
+	}
+
+	h3{text-transform: uppercase; font-weight:bold; font-size:18px; margin-bottom:18px; }
+	span.contact{color: $navy}
+	p a{color:$navy;}
+	p a:hover{color:$white}
+	a img:hover{@include opacity(0.7); }
+
+	.footer_icon{
+		//padding-top:140px;
+		position: absolute;
+	    right: 0;
+	    bottom: 50px;
+		@include breakpoint(smallscreen) {
+ 		//padding-top: 180px;
+		img {max-width:50px; }
+		}
+
+		@include breakpoint(landscape) { 
+     		padding-top: 10px;
+     		img {display:none; }
+	    }
+
+		@include breakpoint(portrait) { 
+		 	padding-top: 10px;
+		 	img {display:none; }
+		}
+
+	}
+}
+
+.copyright{
+	border-top:1px solid $bluegray; 
+	padding-top:10px;
+	
+
+}
+.mesh{
+	float:right; margin-top:-38px;
+ 
+
+		@include breakpoint(landscape) { 
+     		margin-top:0px; float:left;
+	    }
+
+		@include breakpoint(portrait) { 
+		 	margin-top:0px; float:left;
+		}
+
+}
+
+/* #Page Styles
+================================================== */
+
+
+ 
+
+.leftcol{
+ 
+ 
+	@include breakpoint(smallscreen) {background-color: #ff0000;}
+    @include breakpoint(landscape) {background-color: #1234ff;}
+	@include breakpoint(portrait) {background-color: #003366;}
+ 
+}
+
+ 
+.contact-us{
+	position: absolute; 
+	top: 10px; 
+	right: 10px;
+
+	a:hover{color: white;}
+} 
+
+
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+ 
