@@ -2193,12 +2193,17 @@ a.more {
 }
 /* line 541, ../sass/_layout.scss */
 .footer .footer_icon {
-  position: absolute;
   right: 0;
   bottom: 50px;
+  text-align: right;
+  padding-bottom: 10px;
+}
+/* line 549, ../sass/_layout.scss */
+.footer .footer_icon p {
+  margin-top: 10px;
 }
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  /* line 548, ../sass/_layout.scss */
+  /* line 555, ../sass/_layout.scss */
   .footer .footer_icon img {
     max-width: 50px;
   }
@@ -2207,43 +2212,37 @@ a.more {
   /* line 541, ../sass/_layout.scss */
   .footer .footer_icon {
     padding-top: 10px;
-  }
-  /* line 553, ../sass/_layout.scss */
-  .footer .footer_icon img {
-    display: none;
+    text-align: left;
   }
 }
 @media only screen and (max-width: 479px) {
   /* line 541, ../sass/_layout.scss */
   .footer .footer_icon {
     padding-top: 10px;
-  }
-  /* line 558, ../sass/_layout.scss */
-  .footer .footer_icon img {
-    display: none;
+    text-align: left;
   }
 }
 
-/* line 564, ../sass/_layout.scss */
+/* line 573, ../sass/_layout.scss */
 .copyright {
   border-top: 1px solid #99a7b9;
   padding-top: 10px;
 }
 
-/* line 570, ../sass/_layout.scss */
+/* line 579, ../sass/_layout.scss */
 .mesh {
   float: right;
   margin-top: -38px;
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  /* line 570, ../sass/_layout.scss */
+  /* line 579, ../sass/_layout.scss */
   .mesh {
     margin-top: 0px;
     float: left;
   }
 }
 @media only screen and (max-width: 479px) {
-  /* line 570, ../sass/_layout.scss */
+  /* line 579, ../sass/_layout.scss */
   .mesh {
     margin-top: 0px;
     float: left;
@@ -2253,31 +2252,31 @@ a.more {
 /* #Page Styles
 ================================================== */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-  /* line 590, ../sass/_layout.scss */
+  /* line 599, ../sass/_layout.scss */
   .leftcol {
     background-color: #ff0000;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-  /* line 590, ../sass/_layout.scss */
+  /* line 599, ../sass/_layout.scss */
   .leftcol {
     background-color: #1234ff;
   }
 }
 @media only screen and (max-width: 479px) {
-  /* line 590, ../sass/_layout.scss */
+  /* line 599, ../sass/_layout.scss */
   .leftcol {
     background-color: #003366;
   }
 }
 
-/* line 600, ../sass/_layout.scss */
+/* line 609, ../sass/_layout.scss */
 .contact-us {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-/* line 605, ../sass/_layout.scss */
+/* line 614, ../sass/_layout.scss */
 .contact-us a:hover {
   color: white;
 }

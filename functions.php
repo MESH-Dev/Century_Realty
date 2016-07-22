@@ -25,6 +25,8 @@ function loadup_scripts()
 
         wp_register_script('slider', get_template_directory_uri() . '/js/responsiveslides.min.js'); // Custom scripts
         wp_enqueue_script('slider'); // Enqueue it!
+
+        wp_enqueue_style('fontawesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
     }
 }
 

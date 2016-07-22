@@ -60,16 +60,16 @@
 			
 			</div>-->
 			
-	 		<div class="two columns">
+	 		<!-- <div class="two columns">
 	 			<p>
 				<a href="https://www.linkedin.com/company/century-realty-llc" target-"_blank" >
 					<img src="<?php bloginfo( 'template_url' ); ?>/images/linked_in.png">
 				</a>
 			</p>
-	 		</div>
+	 		</div> -->
 
 
-			<div class="nine columns  footer_contact">
+			<div class="ten columns  footer_contact">
 				<div class="border-left">
 					<h3>Contact Us Today</h3>
 					<ul class="footer-locations">
@@ -101,8 +101,17 @@
 				</div>
 			</div>
 
-			<div class="one columns footer_icon">
-				<a href="<?php bloginfo('url' ); ?>" title="Century Equitites"><img src="<?php bloginfo('template_url' ); ?>/images/footer-CE.png"></a>
+			<div class="two columns footer_icon">
+				<a href="<?php bloginfo('url' ); ?>" title="Century Realty"><img src="<?php bloginfo('template_url' ); ?>/images/footer-CE.png"></a>
+				<p>
+				<a href="https://www.linkedin.com/company/century-realty-llc" target-"_blank" >
+					<i class="fa fa-fw fa-2x fa-linkedin-square"></i>
+				</a>
+				<a href="https://twitter.com/Century_Realty" target-"_blank" >
+					<i class="fa fa-fw fa-2x fa-twitter-square"></i>
+				</a>
+			</p>
+
 			</div>
 
 			<div class="twelve columns copyright">

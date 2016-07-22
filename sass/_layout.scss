@@ -540,9 +540,16 @@ a.more{float:right; font-weight:bold; font-style: italic;}
 
 	.footer_icon{
 		//padding-top:140px;
-		position: absolute;
+		//position: absolute;
 	    right: 0;
 	    bottom: 50px;
+	    text-align:right;
+	    padding-bottom:10px;
+
+	    p{
+	    	margin-top:10px;
+	    }
+
 		@include breakpoint(smallscreen) {
  		//padding-top: 180px;
 		img {max-width:50px; }
@@ -550,12 +557,14 @@ a.more{float:right; font-weight:bold; font-style: italic;}
 
 		@include breakpoint(landscape) { 
      		padding-top: 10px;
-     		img {display:none; }
+     		text-align:left;
+     		//img {display:none; }
 	    }
 
 		@include breakpoint(portrait) { 
 		 	padding-top: 10px;
-		 	img {display:none; }
+		 	text-align:left;
+		 	//img {display:none; }
 		}
 
 	}
